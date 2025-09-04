@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+.todo {
+    width: calc(90% / 3);
+    border: 1px solid black;
+    padding: 16px;
+    margin: 14px;
+}
+.todo h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.todo button {
+    padding: 16px 28px;
+    margin-left: 20px;
+}
+
+.main__title {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 32px;
+    color: black;
+}
