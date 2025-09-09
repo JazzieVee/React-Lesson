@@ -1,4 +1,5 @@
-function User({ id, name, email, username}) {
+function User({ id, name, email, username }) {
+    
     return (
          <div style={{ border: "2px solid black" }}>
             <div>{id}</div>
