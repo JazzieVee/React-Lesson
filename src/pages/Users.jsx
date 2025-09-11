@@ -1,9 +1,22 @@
 import { useParams } from 'react-router-dom';
 
 function Users() {
-    const { username } = useParams()   
+    const { id, name, email, username } = useParams();  
+
+//  "https://jsonplaceholder.typicode.com/users/id"
+
     
-    return  <h1>{ username }</h1>
+    return (  
+        <div>
+        <h1>Selected User:</h1>
+        <ul>
+            <li>{ id }</li>            
+            <li>{ name }</li>
+            <li>{ email }</li>
+            <li>{ username }</li>
+        </ul>
+        </div>
+    );
 }
 
 export default Users;
