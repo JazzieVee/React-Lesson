@@ -17,13 +17,11 @@ function Home() {
     useEffect(() => {
         setTimeout(() => {
         fetchUsers();  
-        }, 500); 
+        }, 2000); 
     }, []);
 
-
-    return ( 
-    <div>
-        {users.map((user) => ( 
+function renderUsers() {
+      return users.map((user) => ( 
      <Link to={`/users/${user.id}`} key={user.id}>
         <User
         id={user.id} 
@@ -32,7 +30,16 @@ function Home() {
         username={user.username}
         />
         </Link>
-        ))}
+        ))
+     }
+
+     function renderSkeletonLoading() {
+        return <h1>Loading...</h1>
+     }
+
+    return ( 
+    <div>
+        {users.length ? renderUsers() : renderSkeletonLoading()}
     </div>
     );
 }
